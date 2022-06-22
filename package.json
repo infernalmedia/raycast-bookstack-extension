@@ -1,0 +1,60 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "bookstack-plugin",
+  "title": "BookStack",
+  "description": "Search through your BookStack books, chapters and pages.",
+  "icon": "bookstack.png",
+  "author": "jlalande",
+  "categories": [
+    "Documentation"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "index",
+      "title": "Search Bookstack Pages",
+      "description": "BookStack Plugin for Raycast",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "instance",
+      "type": "textfield",
+      "required": true,
+      "title": "BookStack URL",
+      "description": "URL of your BookStack instance",
+      "placeholder": "URL of your BookStack instance"
+    },
+    {
+      "name": "token",
+      "type": "password",
+      "required": true,
+      "title": "API Token",
+      "description": "Your BookStack API token.",
+      "link": "https://demo.bookstackapp.com/api/docs",
+      "placeholder": "Enter your BookStack API token."
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.36.0",
+    "dayjs": "^1.11.3",
+    "node-fetch": "^3.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "~16.10.0",
+    "@types/react": "^17.0.28",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint"
+  }
+}
